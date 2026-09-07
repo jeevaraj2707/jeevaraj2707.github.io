@@ -1,1 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeevaraj S — Accounts Payable &amp; P2P Specialist</title>
+<meta name="description" content="Jeevaraj S — SAP Accounts Payable Specialist and Process Associate, P2P &amp; Financial Operations. 2.5 years at Capgemini.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233F;
+    --ink-soft:#3C4A66;
+    --paper:#F4F4F0;
+    --paper-raised:#FFFFFF;
+    --rule:#CBD0D6;
+    --rule-strong:#9AA2AF;
+    --emerald:#1F6D5A;
+    --brass:#A9762F;
+    --red-neg:#8C3B2E;
+    --serif:'Source Serif 4', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
 
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; overflow-x:hidden;}
+  body{ overflow-x:hidden; }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--emerald);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site-head{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(244,244,240,0.92);
+    backdrop-filter:saturate(140%) blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .head-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 0;
+    gap:16px;
+  }
+  .head-name{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:0.01em;
+  }
+  nav.head-nav{
+    display:flex;
+    gap:22px;
+    font-size:0.92rem;
+  }
+  nav.head-nav a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:color 0.15s ease, border-color 0.15s ease;
+  }
+  nav.head-nav a:hover{
+    color:var(--ink);
+    border-color:var(--ink-soft);
+  }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:1px solid var(--rule-strong);
+    border-radius:4px;
+    width:38px;
+    height:34px;
+    cursor:pointer;
+  }
+  .nav-toggle span, .nav-toggle::before, .nav-toggle::after{
+    content:"";
+    display:block;
+    width:18px;
+    height:2px;
+    background:var(--ink);
+    margin:4px auto;
+  }
+
+  @media (max-width:640px){
+    nav.head-nav{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--paper);
+      flex-direction:column;
+      gap:0;
+      border-bottom:1px solid var(--rule);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.25s ease;
+    }
+    nav.head-nav.open{ max-height:320px; }
+    nav.head-nav a{
+      padding:14px 28px;
+      border-bottom:1px solid var(--rule);
+      width:100%;
+    }
+    .nav-toggle{ display:block; }
+  }
+
+  /* ---------- Statement header / hero ---------- */
+  .statement{
+    padding:56px 0 40px;
+  }
+  .statement-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    border-bottom:1px solid var(--ink);
+    padding-bottom:10px;
+    margin-bottom:34px;
+    letter-spacing:0.02em;
+  }
+  @media (max-width:560px){
+    .statement-top{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:4px;
+    }
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    margin:0 0 6px;
+    line-height:1.05;
+  }
+  .role-line{
+    font-family:var(--serif);
+    font-size:clamp(1.05rem, 2.4vw, 1.3rem);
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:0 0 26px;
+    max-width:34ch;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 26px;
+    font-size:0.92rem;
+    margin-bottom:30px;
+  }
+  .contact-row a{
+    text-decoration:none;
+    border-bottom:1px solid var(--rule-strong);
+  }
+  .contact-row a:hover{ border-color:var(--ink); }
+
+  .cta-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    font-family:var(--sans);
+    font-size:0.9rem;
+    font-weight:500;
+    padding:11px 20px;
+    text-decoration:none;
+    border-radius:2px;
+    transition:background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:var(--paper-raised);
+    border:1px solid var(--ink);
+  }
+  .btn-primary:hover{ background:var(--emerald); border-color:var(--emerald); }
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--rule-strong);
+  }
+  .btn-ghost:hover{ border-color:var(--ink); }
+
+  /* ---------- Summary ---------- */
+  .summary{
+    padding:10px 0 44px;
+    border-bottom:1px solid var(--rule);
+  }
+  .summary p{
+    max-width:64ch;
+    font-size:1.02rem;
+    color:var(--ink-soft);
+  }
+  .summary .award{
+    margin-top:16px;
+    font-size:0.9rem;
+    color:var(--brass);
+    font-weight:500;
+  }
+
+  /* ---------- Ledger stat strip ---------- */
+  .ledger{
+    padding:40px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .ledger-row{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px dotted var(--rule-strong);
+  }
+  .ledger-row:last-child{ border-bottom:none; }
+  .ledger-figure{
+    font-family:var(--mono);
+    font-weight:500;
+    font-size:1.35rem;
+    color:var(--emerald);
+    white-space:nowrap;
+    min-width:88px;
+  }
+  .ledger-leader{
+    flex:1;
+    border-bottom:1px dotted var(--rule-strong);
+    height:0;
+    transform:translateY(-6px);
+  }
+  .ledger-label{
+    font-size:0.94rem;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width:560px){
+    .ledger-row{
+      flex-wrap:wrap;
+      row-gap:4px;
+    }
+    .ledger-leader{ display:none; }
+    .ledger-label{ flex-basis:100%; }
+  }
+
+  /* ---------- Section shell ---------- */
+  section{
+    padding:52px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:30px;
+  }
+  h2{
+    font-family:var(--serif);
+    font-size:1.6rem;
+    font-weight:600;
+    margin:0;
+  }
+  .section-index{
+    font-family:var(--mono);
+    font-size:0.8rem;
+    color:var(--rule-strong);
+  }
+
+  /* ---------- Experience ---------- */
+  .role-block{
+    margin-bottom:40px;
+  }
+  .role-block:last-child{ margin-bottom:0; }
+  .role-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:2px;
+  }
+  .role-title{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.18rem;
+  }
+  .role-dates{
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .role-org{
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    margin-bottom:16px;
+    font-style:italic;
+    font-family:var(--serif);
+  }
+  ul.achieve{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  ul.achieve li{
+    position:relative;
+    padding-left:20px;
+    margin-bottom:11px;
+    font-size:0.96rem;
+    color:var(--ink);
+  }
+  ul.achieve li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--rule-strong);
+  }
+  .role-award{
+    display:inline-block;
+    margin-top:12px;
+    font-size:0.84rem;
+    font-family:var(--mono);
+    color:var(--brass);
+    border:1px solid var(--brass);
+    padding:4px 10px;
+    border-radius:2px;
+  }
+
+  /* ---------- Skills as chart of accounts ---------- */
+  .accounts{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:32px 40px;
+  }
+  @media (max-width:640px){
+    .accounts{ grid-template-columns:1fr; }
+  }
+  .account-group h3{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    font-weight:500;
+    margin:0 0 12px;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:8px;
+  }
+  .account-group ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .account-group li{
+    font-size:0.94rem;
+    padding:6px 0;
+    border-bottom:1px dotted var(--rule);
+    display:flex;
+    justify-content:space-between;
+  }
+  .account-group li:last-child{ border-bottom:none; }
+
+  /* ---------- Education ---------- */
+  .edu-row{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px dotted var(--rule-strong);
+    flex-wrap:wrap;
+  }
+  .edu-row:last-child{ border-bottom:none; }
+  .edu-name{ font-weight:500; font-size:0.98rem; }
+  .edu-school{ color:var(--ink-soft); font-size:0.9rem; }
+  .edu-dates{ font-family:var(--mono); font-size:0.82rem; color:var(--ink-soft); white-space:nowrap; }
+
+  /* ---------- Certifications ---------- */
+  .certs{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px 32px;
+  }
+  @media (max-width:640px){ .certs{ grid-template-columns:1fr; } }
+  .certs li{
+    list-style:none;
+    font-size:0.95rem;
+    padding:10px 0;
+    border-bottom:1px dotted var(--rule);
+  }
+  .certs strong{ font-weight:600; }
+
+  /* ---------- Footer / contact ---------- */
+  footer{
+    padding:52px 0 60px;
+  }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  .footer-contact h2{ margin-bottom:14px; }
+  .footer-contact p{
+    color:var(--ink-soft);
+    max-width:44ch;
+    margin-bottom:22px;
+    font-size:0.98rem;
+  }
+  .footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-size:0.96rem;
+  }
+  .footer-links a{
+    text-decoration:none;
+    border-bottom:1px solid var(--rule-strong);
+    width:fit-content;
+  }
+  .footer-links a:hover{ border-color:var(--ink); }
+  .languages{
+    font-size:0.86rem;
+    color:var(--ink-soft);
+  }
+  .declaration{
+    margin-top:44px;
+    padding-top:22px;
+    border-top:1px solid var(--ink);
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .sig{
+    font-family:var(--serif);
+    font-style:normal;
+    font-weight:600;
+    color:var(--ink);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="head-name">Jeevaraj S</div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle"></button>
+    <nav class="head-nav" id="headNav">
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="statement" style="border-bottom:none; padding-bottom:0;">
+      <div class="statement-top">
+        <span>Professional Record</span>
+        <span>Trichy, Tamil Nadu, India</span>
+      </div>
+      <h1 class="name">Jeevaraj S</h1>
+      <p class="role-line">SAP Accounts Payable Specialist — Process Associate, P2P &amp; Financial Operations</p>
+      <div class="contact-row">
+        <a href="mailto:jeevassd2707@gmail.com">jeevassd2707@gmail.com</a>
+        <a href="tel:+918248557358">+91 82485 57358</a>
+        <span>Trichy, Tamil Nadu</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="assets/Jeevaraj_S_Resume.pdf" download>Download resume (PDF)</a>
+        <a class="btn btn-ghost" href="mailto:jeevassd2707@gmail.com">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="summary" class="summary">
+      <p>Results-driven SAP Accounts Payable and Procure-to-Pay professional with 2.5 years of end-to-end AP operations experience at Capgemini, a Fortune 500 MNC. Consistently maintains 100% SLA adherence, has cut invoice aging by 30%, and mentors new team members. Now looking for a Senior Associate role in Accounts Payable or Financial Operations at a financial MNC, driving process excellence and compliance.</p>
+      <p class="award">Raising Star Award — consistent performance and outstanding commitment, June 2025</p>
+    </section>
+
+    <section class="ledger" aria-label="Key figures">
+      <div class="ledger-row">
+        <span class="ledger-figure">2.5 yrs</span>
+        <span class="ledger-leader"></span>
+        <span class="ledger-label">Experience in Accounts Payable operations</span>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-figure">500+</span>
+        <span class="ledger-leader"></span>
+        <span class="ledger-label">PO and Non-PO invoices processed monthly</span>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-figure">99%</span>
+        <span class="ledger-leader"></span>
+        <span class="ledger-label">First-pass invoice accuracy</span>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-figure">100%</span>
+        <span class="ledger-leader"></span>
+        <span class="ledger-label">SLA adherence across client deliverables</span>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-figure">30%</span>
+        <span class="ledger-leader"></span>
+        <span class="ledger-label">Reduction in invoice aging, via a priority allocation matrix</span>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <span class="section-index">02</span>
+      </div>
+
+      <div class="role-block">
+        <div class="role-top">
+          <span class="role-title">Process Associate — Accounts Payable (P2P)</span>
+          <span class="role-dates">Oct 2023 – May 2026</span>
+        </div>
+        <div class="role-org">Capgemini Business Services India Ltd, Trichy</div>
+        <ul class="achieve">
+          <li>Processed and cleared 500+ invoices per month (PO and Non-PO) via SAP VIM and MIRO, achieving 99% first-pass accuracy and reducing rework and escalations.</li>
+          <li>Maintained 100% SLA adherence across all client deliverables by designing a priority-based invoice allocation matrix that cut aging invoices by 30%.</li>
+          <li>Executed end-to-end 2-way and 3-way PO matching, resolving discrepancies within a 24-hour turnaround and eliminating duplicate payments and financial leakage.</li>
+          <li>Managed monthly reconciliation for 50+ vendors and coordinated credit notes, keeping AP ledgers clean ahead of every month-end close.</li>
+          <li>Prepared and presented monthly production and SLA reports for senior management, translating team throughput into clear, data-driven insight.</li>
+          <li>Ran training sessions and team huddles to share process knowledge across the AP team.</li>
+          <li>Led a SAP scripting automation initiative for repetitive AP tasks, cutting manual processing time per invoice by 20% and freeing up team capacity.</li>
+        </ul>
+        <span class="role-award">Raising Star Award — June 2025</span>
+      </div>
+
+      <div class="role-block">
+        <div class="role-top">
+          <span class="role-title">Account Assistant</span>
+          <span class="role-dates">Jul 2021 – Aug 2022</span>
+        </div>
+        <div class="role-org">R. Manikandan and Associates (F.CA Auditor), Madurai</div>
+        <ul class="achieve">
+          <li>Maintained books of accounts, trial balances and balance sheets for 15+ clients, keeping records audit-ready year-round.</li>
+          <li>Filed Income Tax Returns for multiple clients through government portals with zero late submissions or penalties.</li>
+          <li>Managed journal entries, ledgers and salary accounts, building a strong foundation in Indian compliance frameworks relevant to MNC AP roles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Skills &amp; tools</h2>
+        <span class="section-index">03</span>
+      </div>
+      <div class="accounts">
+        <div class="account-group">
+          <h3>SAP &amp; ERP systems</h3>
+          <ul>
+            <li>SAP S/4 HANA</li>
+            <li>VIM Workplace</li>
+            <li>MIRO</li>
+            <li>SAP Fiori</li>
+            <li>Tally ERP 9</li>
+          </ul>
+        </div>
+        <div class="account-group">
+          <h3>P2P &amp; AP processes</h3>
+          <ul>
+            <li>Procure-to-Pay (P2P)</li>
+            <li>PO &amp; Non-PO invoice processing</li>
+            <li>2-way &amp; 3-way matching</li>
+            <li>Payment runs</li>
+            <li>Month-end closing</li>
+          </ul>
+        </div>
+        <div class="account-group">
+          <h3>Reporting &amp; reconciliation</h3>
+          <ul>
+            <li>SLA management</li>
+            <li>Vendor reconciliation</li>
+            <li>Blackline Portal</li>
+            <li>Aging analysis</li>
+            <li>Production reporting</li>
+          </ul>
+        </div>
+        <div class="account-group">
+          <h3>Operations &amp; people</h3>
+          <ul>
+            <li>MS Excel (VLOOKUP, pivots)</li>
+            <li>Process automation</li>
+            <li>Team handling</li>
+            <li>Training &amp; client handling</li>
+            <li>Financial operations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-head">
+        <h2>Education</h2>
+        <span class="section-index">04</span>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">Bachelor of Commerce (B.Com)</div>
+          <div class="edu-school">Srimad Andavan College of Arts and Science, Trichy</div>
+        </div>
+        <div class="edu-dates">2018 – 2021</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">Higher Secondary Certificate (HSC)</div>
+          <div class="edu-school">K.A.P.V Higher Secondary School</div>
+        </div>
+        <div class="edu-dates">2017 – 2018</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">Secondary School Leaving Certificate (SSLC)</div>
+          <div class="edu-school">Jessie Matric Higher Secondary School</div>
+        </div>
+        <div class="edu-dates">2014 – 2015</div>
+      </div>
+    </section>
+
+    <section id="certifications" aria-label="Certifications and tools">
+      <div class="section-head">
+        <h2>Certifications &amp; tools</h2>
+        <span class="section-index">05</span>
+      </div>
+      <ul class="certs">
+        <li><strong>SAP S/4 HANA</strong> — Accounts Payable Workflow (VIM, Fiori)</li>
+        <li><strong>MS Excel</strong> — VLOOKUP, pivot tables, data reconciliation</li>
+        <li><strong>Blackline Portal</strong> — close activity management</li>
+        <li><strong>Tally ERP 9</strong> — financial accounting</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-contact">
+          <h2>Let's talk</h2>
+          <p>Open to Senior Associate roles in Accounts Payable and Financial Operations at a financial MNC. Reach out directly — happy to walk through specific process improvements or SLA numbers.</p>
+          <p class="languages">Languages: Tamil (native), English (professional)</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:jeevassd2707@gmail.com">jeevassd2707@gmail.com</a>
+          <a href="tel:+918248557358">+91 82485 57358</a>
+          <a href="assets/Jeevaraj_S_Resume.pdf" download>Download full resume (PDF)</a>
+        </div>
+      </div>
+      <div class="declaration">
+        <span>I hereby declare that the above-furnished information is true to the best of my knowledge and belief.</span>
+        <span class="sig">Jeevaraj S</span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('headNav');
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
